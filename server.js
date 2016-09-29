@@ -10,15 +10,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function(req,res){
-    res.send('This is article one response')
+    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
     
 });
 app.get('/article-two', function(req,res){
-    res.send('This is article two response')
+    res.send('This is article two response');
     
 });
 app.get('/article-three', function(req,res){
-    res.send('This is article three response')
+    res.send('This is article three response');
     
 });
 
