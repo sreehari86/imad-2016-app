@@ -56,7 +56,7 @@ function createTemplate(data){
 var htmlTemplate=` <html>
   <head>
          <title>
-              ${Title}
+              ${title}
          </title>
               <meta name="viewport" contents="width=device-width"/>
               <link href="/ui/style.css" rel="stylesheet" />
