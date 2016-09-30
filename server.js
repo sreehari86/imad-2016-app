@@ -5,11 +5,11 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articles={
-     'article-one':{
-    title:'Article one | sreehari',
-    heading:'Article one',
-    date:'Sept 29, 2016',
-    content:`<p>
+    'article-one':{
+     title:'Article one | sreehari',
+     heading:'Article one',
+     date:'Sept 29, 2016',
+     content:`<p>
                  Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article.
                   Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article.
                    Hi I am Sreehari and This is my first article.
