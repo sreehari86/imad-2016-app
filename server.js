@@ -4,12 +4,13 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articles={
-    'article-one':{
-     title:'Article one | sreehari',
-     heading:'Article one',
-     date:'Sept 29, 2016',
-     content:`<p>
+
+var articleOne={
+    title:'Article-one | Sreehari',
+    heading:'Article One',
+    date:'Sept 30',
+    Content:`
+     <p>
                  Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article.
                   Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article.
                    Hi I am Sreehari and This is my first article.
@@ -23,38 +24,15 @@ var articles={
                  Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article.
                 Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article.
                  Hi I am Sreehari and This is my first article.
-          </p>`
-          
-    },
-    'article-two':{
-        
-    title:'Article two | sreehari',
-    heading:'Article two',
-    date:'Sept 29, 2016',
-    content:`<p>
-                 Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article.
-        
-          </p>`
-    },
-    'article-three':{
-    title:'Article three | sreehari',
-    heading:'Article three',
-    date:'Sept 29, 2016',
-    content:`<p>
-                 Hi I am Sreehari and This is my thrid article. Hi I am Sreehari and This is my third article. Hi I am Sreehari and This is my third article.
-        
-          </p>`
-    }
-    
+          </p>
+    `
 };
-
 function createTemplate(data){
-    var title=data.title;
+    var title= data.title;
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-var htmlTemplate=`
-<html>
+    var htmlTemplate=`<html>
   <head>
          <title>
               ${title}
@@ -73,7 +51,7 @@ var htmlTemplate=`
         
        <hr/>
         <h3>
-           ${heading}
+            ${heading}
        </h3>
         
         <div>
@@ -81,23 +59,23 @@ var htmlTemplate=`
         </div>
         
         <div>
-     ${content}
+            ${content}
          </div>
          </div>
      </body>
-  </html>`;
-  return htmlTemplate
+  </html>`
+;
+ return htmlTemplate   
 }
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req,res){
-    var articleName=req.param.articleName;
-    res.send(createTemplate(articles[article-one]));
+app.get('/article-one',function(req,res){
+    res.send(createTemplate(articleOne));
     
-});
+})
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
