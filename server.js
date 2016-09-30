@@ -9,7 +9,7 @@ var articleOne={
     title:'Article-one | Sreehari',
     heading:'Article One',
     date:'Sept 30',
-    Content:`
+    content:`
      <p>
                  Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article.
                   Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article. Hi I am Sreehari and This is my first article.
